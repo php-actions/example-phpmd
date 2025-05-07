@@ -1,0 +1,20 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: php-actions/composer@v6
+
+      - name: Mess Detector
+        uses: php-actions/phpmd@master
+        with:
+          php_version: 8.4
+          path: src/
+          output: text
+          ruleset: src/phpmd.xml
