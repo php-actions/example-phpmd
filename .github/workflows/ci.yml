@@ -12,7 +12,7 @@ jobs:
       - uses: php-actions/composer@v6
 
       - name: Mess Detector
-        uses: php-actions/phpmd@master
+        uses: php-actions/phpmd@path-update
         with:
           php_version: 8.4
           path: src/
