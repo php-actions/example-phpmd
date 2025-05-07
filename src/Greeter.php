@@ -2,9 +2,9 @@
 namespace App;
 
 class Greeter {
-	public function greet(?string $name = null):string {
-		if($name) {
-			return "Hello, $name!";
+	public function greet(?string $n = null):string {
+		if($n) {
+			return "Hello, $n!";
 		}
 
 		return "Hello!";
